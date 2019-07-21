@@ -37,7 +37,8 @@ class App extends Component {
         const products =
         (results.map((result) =>
             <li>{result.name} {result.category} {result.price}</li>)); // need to include array key here* //https://reactjs.org/docs/lists-and-keys.html
-        return products
+        console.log(products);
+        return products;
     }
 
   render() {
@@ -52,9 +53,9 @@ class App extends Component {
             <ul class="categories">
             {listItems}
             </ul>
-        <ul>
+            <ul>
             {this.displayProducts()}
-        </ul>
+            </ul>
 
       </div>
     );
