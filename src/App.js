@@ -24,39 +24,47 @@ import './App.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {chosenCategory: ""};
+        this.state = {currentCategory: null, currentProducts: null};
     }
 
-    changeCategory(props) {
-        this.setState({chosenCategory: props.category});
+    ChangeCategory(props) {
+        this.setState({currentCategory: props.category});
+        this.setState({ currentProducts: this.DisplayProducts()})
+        // console.log(this.state)
     }
 
-    displayProducts() {
-        const category = this.state.chosenCategory
+    DisplayProducts() {
+        const category = this.state.currentCategory
         const results = inventory.filter(item => item.category === category);
         const products =
         (results.map((result) =>
-            <li>{result.name} {result.category} {result.price}</li>)); // need to include array key here* //https://reactjs.org/docs/lists-and-keys.html
-        console.log(products);
+            <li className="items"><div className="item-text">Name: {result.name}</div><div className="item-text">Category: {result.category}</div><div className="item-text">Price: {result.price}</div></li>)); // need to include array key here* //https://reactjs.org/docs/lists-and-keys.html
+        // console.log(products);
         return products;
     }
 
   render() {
-
+    const products = this.state.currentProducts;
+    console.log(products)
     const listItems =
     (categories.map((category) =>
-        <li><button onClick={() => this.changeCategory({category})}>{category}</button></li>)); // need to include array key here*
-                                                                                                // https://reactjs.org/docs/lists-and-keys.html
+        <li>
+            <button onClick={() => this.ChangeCategory({category})}>{category}</button>
+        </li>
+        )
+    ); // need to include array key here*    // https://reactjs.org/docs/lists-and-keys.html
+
     return (
       <div className="App">
-        <h1>Show products here</h1>
-            <ul class="categories">
+        <h1 className="display">Show products here</h1>
+        <ol className="container">
+            <ul className="categories">
             {listItems}
             </ul>
-            <ul>
-            {this.displayProducts()}
+            <ul className="products">
+                {this.DisplayProducts()}
             </ul>
-
+        </ol>
       </div>
     );
   }

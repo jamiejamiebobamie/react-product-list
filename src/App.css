@@ -1,6 +1,44 @@
 .App {
- width: 960px;
+ width: 1000px;
  margin: auto;
  display: grid;
  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.categories{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    width: 60vw;
+}
+
+.products{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-right: 400px;
+    height: 230px;
+    margin-top: 50px;
+    width: 50vw;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: red;
+    margin: 20px;
+    align-items: center;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.item-text{
+    margin: 10px
 }
