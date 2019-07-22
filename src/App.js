@@ -24,13 +24,11 @@ import './App.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {currentCategory: null, currentProducts: null};
+        this.state = {currentCategory: null};
     }
 
     ChangeCategory(props) {
         this.setState({currentCategory: props.category});
-        this.setState({ currentProducts: this.DisplayProducts()})
-        // console.log(this.state)
     }
 
     DisplayProducts() {
@@ -44,8 +42,6 @@ class App extends Component {
     }
 
   render() {
-    const products = this.state.currentProducts;
-    console.log(products)
     const listItems =
     (categories.map((category) =>
         <li>
