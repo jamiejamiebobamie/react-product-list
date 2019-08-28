@@ -1,6 +1,6 @@
 import React from 'react';
 import './Products.css'
-import inventory, { categories } from './inventory'
+import inventory from './inventory'
 import Items from "./Items.js"
 
 function Products(props){
@@ -41,8 +41,6 @@ function Products(props){
     </ul>
     )
 }
-
-
 
 
 export default Products;
