@@ -1,10 +1,24 @@
 .Items{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     background-color: #6B7A8F;
     margin: 20px;
-    align-items: center;
+    align-items: flex-start;
     padding: 30px;
     border-radius: 2px;
+    flex: 1 0 10%;
+}
+
+.ItemsInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: none;
+    margin-right: 5vw;
+}
+
+@media only screen and (max-width: 700px){
+    .Items{
+        flex: 1 0 70%;
+    }
 }

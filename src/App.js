@@ -33,9 +33,9 @@ class App extends Component {
                     <button onClick={() => this.ChangeCategory({category:"All"})}>All</button>
                 </li>
             </ul>
+            {(this.state.currentCategory!=null ? <Pricebar currentCategory={this.state.currentCategory}/>:"")}
             <Products currentCategory={this.state.currentCategory} />
         </ol>
-        {(this.state.currentCategory!=null ? <Pricebar currentCategory={this.state.currentCategory}/>:"")}
       </div>
     );
   }

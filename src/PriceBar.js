@@ -36,7 +36,7 @@ function Pricebar(props){
 
     return (
         <div className="Pricebar">
-            <h3>the price is {price}</h3>
+            <h3>the price for these items is {price}</h3>
         </div>
     )
 }
