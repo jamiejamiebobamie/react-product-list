@@ -1,0 +1,17 @@
+/* .Products{
+    display: flex;
+    flex-direction: row;
+
+} */
+
+.Products{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* margin-right: 400px; */
+    height: auto;
+    /* margin-top: 50px; */
+    grid-template-columns: 3;
+    width: 101%;
+    margin-left: -50px;
+}

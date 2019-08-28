@@ -1,0 +1,10 @@
+.Items{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #6B7A8F;
+    margin: 20px;
+    align-items: center;
+    padding: 30px;
+    border-radius: 2px;
+}

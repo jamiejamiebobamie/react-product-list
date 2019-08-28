@@ -1,24 +1,9 @@
 import React, { Component } from 'react';
 import inventory, { categories } from './inventory'
 import './App.css';
-
-
-// class LoggingButton extends React.Component {
-//   // This syntax ensures `this` is bound within handleClick.
-//   // Warning: this is *experimental* syntax.
-//   handleClick = () => {
-//     this.props.onButtonClick(this.props.value);
-//   }
-//
-//   render() {
-//     return (
-//       <button onClick={this.handleClick}>
-//         {this.props.column}
-//       </button>
-//     );
-//   }
-// }
-
+import Products from './Products.js'
+// import "./challenge3/category-button"
+// import "./challenge3/product"
 
 
 class App extends Component {
@@ -29,16 +14,6 @@ class App extends Component {
 
     ChangeCategory(props) {
         this.setState({currentCategory: props.category});
-    }
-
-    DisplayProducts() {
-        const category = this.state.currentCategory
-        const results = inventory.filter(item => item.category === category);
-        const products =
-        (results.map((result) =>
-            <li className="items"><div className="item-text">Name: {result.name}</div><div className="item-text">Category: {result.category}</div><div className="item-text">Price: {result.price}</div></li>)); // need to include array key here* //https://reactjs.org/docs/lists-and-keys.html
-        // console.log(products);
-        return products;
     }
 
   render() {
@@ -52,14 +27,15 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1 className="display">Show products here</h1>
+        <h1 className="display">Products:</h1>
         <ol className="container">
             <ul className="categories">
-            {listItems}
+                {listItems}
+                <li>
+                    <button onClick={() => this.ChangeCategory({category:"All"})}> All </button>
+                </li>
             </ul>
-            <ul className="products">
-                {this.DisplayProducts()}
-            </ul>
+            <Products currentCategory={this.state.currentCategory} />
         </ol>
       </div>
     );
