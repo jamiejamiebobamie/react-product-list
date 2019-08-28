@@ -1,5 +1,5 @@
 import React from 'react';
-import inventory, { categories } from './inventory'
+import inventory from './inventory'
 import './PriceBar.css'
 
 function Pricebar(props){
