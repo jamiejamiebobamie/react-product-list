@@ -1,0 +1,8 @@
+.Pricebar{
+    height: 100px;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    /* padding: 60em; */
+}

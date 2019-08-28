@@ -6,7 +6,6 @@ import Items from "./Items.js"
 function Products(props){
     function DisplayProducts() {
         const category = props.currentCategory
-        console.log(category)
         if (category === "All"){
             const results = inventory;
             const products =
