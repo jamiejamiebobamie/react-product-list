@@ -1,8 +1,31 @@
 .Pricebar{
     height: 100px;
-    margin-top: 130px;
+    margin-top: atuo;
     display: flex;
     flex-direction: column;
     align-self: center;
+        margin-bottom: auto;
     /* padding: 60em; */
+}
+
+h3{
+    justify-content: center;
+    align-self: center;
+    text-align-last: justify;
+    word-wrap: break-word;
+    text-overflow: clip;
+    color:#F7C331;
+    font-size: 2.5vw;
+}
+
+@media only screen and (max-width: 1200px) {
+    h3{
+        font-size: 3.5vw;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    h3{
+        font-size: 4vw;
+    }
 }
