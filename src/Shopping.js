@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Shopping.css';
 import Products from './Products.js'
 import inventory, { categories } from './inventory'
+import Pricebar from './Pricebar.js'
 
 
 class Shopping extends Component {
@@ -72,6 +73,7 @@ class Shopping extends Component {
                     <button onClick={() => this.setState( {currentCategories: null} )}>None (0)</button>
                 </li>
             </ul>
+            {(this.state.currentCategories!=null ? <Pricebar currentCategories={this.state.currentCategories}/>:"")}
             <Products addItemToCart={this.props.addItemToCart} currentCategories={this.state.currentCategories} />
         </div>
     )
