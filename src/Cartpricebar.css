@@ -15,17 +15,24 @@ h3{
     word-wrap: break-word;
     text-overflow: clip;
     color:#F7C331;
-    font-size: 2.5vw;
 }
 
-/* @media only screen and (max-width: 1200px) {
-    h3{
-        font-size: 3.5vw;
-    }
-} */
+.speechBubble{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-bottom: -70px;
+    margin-right: 35px;
+    margin-left: auto;
+    pointer-events:none;
+    font-size: 17px;
+}
+
+.cashierImage:hover {
+    color: #F7882F;
+}
 
 .price{
-
     position: relative;
     z-index: 2;
     margin-top: 160px;
@@ -33,33 +40,29 @@ h3{
     margin-right: 50px;
     margin-left: auto;
     font-size: 40px;
+    pointer-events:none;
 }
 
-.cashierImage{
+.GITHUB{
+
+}
+
+.cashierImage1{
     display: flex;
-    /* position: absolute;
-    z-index: 1; */
-        margin-top: -30px;
+    margin-top: -30px;
     margin-left: auto;
-    margin-right: -30px;
-    /* float: right; */
+    margin-right: -20px;
+    background-color: white;
 }
 
-@media only screen and (max-width:920px) {
-    .Pricebar{
-        /* margin-top: 70px; */
-        /* margin-bottom: -10px; */
-    }
-    h3{
-        /* color: blue; */
-        /* font-size: 4vw; */
-    }
+.GITHUB:hover .cashierImage1{
+    background-color: transparent;
 }
 
 @media only screen and (max-width: 600px) {
     .cashierImage{
         justify-content: flex-end;
-        margin-left: -20px;
+        margin-left: -100px;
         /* margin-right: auto; */
 
     }
@@ -68,5 +71,10 @@ h3{
         margin-top: 170px;
         margin-right: 70px;
         margin-left: 10px;
+    }
+
+    .speechBubble{
+        margin-right: 70px;
+        font-size: 15px;
     }
 }

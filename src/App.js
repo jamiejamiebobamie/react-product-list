@@ -16,19 +16,18 @@ class App extends Component {
         };
     }
 
+
+
     addItemToCart(props) {
         this.setState( { cartItems: [...this.state.cartItems, props] } );
     }
 
 // https://stackoverflow.com/questions/36326612/delete-item-from-state-array-in-react
     removeItemFromCart(props) {
-        console.log('hello', props)
         let array = [...this.state.cartItems]; // make a separate copy of the array
         array.splice(props, 1);
         this.setState( {cartItems: array} );
-        console.log(this.state.cartItems)
     }
-        // this.setState( { cartItems: [...this.state.cartItems, props] } );
 
   render() {
     let pageContent

@@ -1,5 +1,4 @@
 import React from 'react';
-import inventory from './inventory'
 import './Cartpricebar.css'
 
 
@@ -28,13 +27,18 @@ function Cartpricebar(props){
         price = price[0] + ".00"
     }
 
-
     return (
         <div className="Pricebar">
+            <h3 className="speechBubble">checkout?</h3>
             <h3 className="price">${price}</h3>
-            <img className="cashierImage" width="276" height="200" src="./imgs/checkout_iconFront.png" alt="" />
+            <a className="GITHUB" href="https://github.com/jamiejamiebobamie/react-product-list">
+                <img className="cashierImage1" width="276" height="200" src="./imgs/checkout_iconFront.png" alt="" />
+            </a>
         </div>
     )
 }
 
 export default Cartpricebar
+
+// <img className="cashierImage2" width="276" height="200" src="./imgs/checkout_iconFront.png" alt="" />
+// 

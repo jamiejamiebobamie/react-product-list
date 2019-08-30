@@ -7,8 +7,11 @@ class Shopping extends Component {
 
     constructor(props) {
         super(props);
+        this.toggleCategories = this.toggleCategories.bind(this);
+
         this.state = {
             currentCategories: props.currentCategories,
+            showCategories: false,
         };
     }
 
@@ -51,6 +54,12 @@ class Shopping extends Component {
         }
         return false
     }
+
+    toggleCategories(props) {
+        this.setState( { showCategories: !this.state.showCategories } );
+                console.log(this.state.showCategories)
+    }
+
     render(){
         const listItems =
         (categories.map((category) =>
@@ -60,22 +69,26 @@ class Shopping extends Component {
             </li>
             )
         ); // need to include array key here*    // https://reactjs.org/docs/lists-and-keys.html
+        let categories_buttons = (
+                    <ul className="categories">
+                        {listItems}
+                        <li className={(this.CheckCategories({category: "All"}) ? "selectedButton":"unselectedButton")}>
+                            <button onClick={() => this.ChangeCategory({category:"All"})}>All ({inventory.length})</button>
+                        </li>
+                        <li className={(false ? "selected-button":"unselectedButton")}>
+                            <button className="noCategories" onClick={() => this.setState( {currentCategories: null} )}>X</button>
+                        </li>
+                    </ul>
+            )
     return (
         <div>
-            <ul className="categories">
-                {listItems}
-                <li className={(this.CheckCategories({category: "All"}) ? "selectedButton":"unselectedButton")}>
-                    <button onClick={() => this.ChangeCategory({category:"All"})}>All ({inventory.length})</button>
-                </li>
-                <li className={(false ? "selected-button":"unselectedButton")}>
-                    <button onClick={() => this.setState( {currentCategories: null} )}>None (0)</button>
-                </li>
-            </ul>
+            <button className={(this.state.showCategories ? "toggleCategoriesOn" : "toggleCategoriesOff")} onClick={this.toggleCategories}>Categories</button>
+            {this.state.showCategories ? categories_buttons : ""}
             <Products addItemToCart={this.props.addItemToCart} currentCategories={this.state.currentCategories} />
         </div>
     )
 }
 }
 // {(this.state.currentCategories!=null ? <Pricebar currentCategories={this.state.currentCategories}/>:"")}
-
+// None (0)
 export default Shopping
