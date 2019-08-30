@@ -39,17 +39,16 @@ class App extends Component {
     }
         return (
           <div className="App">
-          <div className="fauxNavbar">
-              <div>
-                <h1 className="display">EasyShop</h1>
-                <button className="toggleCart" onClick={ () => { this.setState( {ShoppingCartToggled: !this.state.ShoppingCartToggled} ) } }> { (this.state.ShoppingCartToggled ? 'Shop' :("My Cart ("+this.state.cartItems.length+")") )}</button>
+              <div className="fauxNavbar">
+                  <div className="title">
+                    <h1 className="display">EasyShop</h1>
+                    <button className="toggleCart" onClick={ () => { this.setState( {ShoppingCartToggled: !this.state.ShoppingCartToggled} ) } }> { (this.state.ShoppingCartToggled ? 'Shop' :("My Cart ("+this.state.cartItems.length+")") )}</button>
+                  </div>
+                  {(this.state.cartItems < 1 ? <Cartpricebar cartItems={[{price:0.00}]} /> : <Cartpricebar cartItems={this.state.cartItems} />)}
               </div>
-              {(this.state.cartItems < 1 ? <Cartpricebar cartItems={[{price:0.00}]} /> : <Cartpricebar cartItems={this.state.cartItems} />)}
-              <img className="cashier" width="276" height="200" src="./imgs/checkout_iconSide.png" alt="" />
-          </div>
-            <ol className="container">
-                {pageContent}
-            </ol>
+                <ol className="container">
+                    {pageContent}
+                </ol>
           </div>
         );
     }

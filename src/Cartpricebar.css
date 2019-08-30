@@ -24,13 +24,49 @@ h3{
     }
 } */
 
+.price{
+
+    position: relative;
+    z-index: 2;
+    margin-top: 160px;
+    margin-bottom: -150px;
+    margin-right: 70px;
+    margin-left: auto;
+    font-size: 40px;
+}
+
+.cashierImage{
+    display: flex;
+    /* position: absolute;
+    z-index: 1; */
+        margin-top: -30px;
+    margin-left: auto;
+    margin-right: -30px;
+    /* float: right; */
+}
+
 @media only screen and (max-width:920px) {
     .Pricebar{
-        margin-top: 70px;
+        /* margin-top: 70px; */
         /* margin-bottom: -10px; */
     }
     h3{
         /* color: blue; */
-        font-size: 4vw;
+        /* font-size: 4vw; */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cashierImage{
+        justify-content: flex-end;
+        margin-left: -20px;
+        /* margin-right: auto; */
+
+    }
+    .price{
+        justify-content: flex-end;
+        margin-top: 170px;
+        margin-right: 70px;
+        margin-left: 10px;
     }
 }

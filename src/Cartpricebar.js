@@ -24,12 +24,15 @@ function Cartpricebar(props){
             price[1] = price[1]+ '0'
         }
         price = price[0] + "." + price[1].slice(0,2)
+    } else {
+        price = price[0] + ".00"
     }
 
 
     return (
         <div className="Pricebar">
-            <h3>${price}</h3>
+            <h3 className="price">${price}</h3>
+            <img className="cashierImage" width="276" height="200" src="./imgs/checkout_iconFront.png" alt="" />
         </div>
     )
 }

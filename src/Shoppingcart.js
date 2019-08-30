@@ -7,7 +7,6 @@ import Cartpricebar from './Cartpricebar.js'
 function ShoppingCart(props){
     const items =  (
         <div>
-            <Cartpricebar cartItems={props.cartItems} />
             <Cartproducts removeItemFromCart={props.removeItemFromCart} cartItems={props.cartItems} />
         </div>
     )
