@@ -12,7 +12,7 @@ function Products(props){
                 const products =
                 (results.map(
                     (result) =>
-                    <Items name={result.name} category={result.category} price={result.price} />
+                    <Items key={result.name} onClick={() => props.buyProduct(result.name)} name={result.name} category={result.category} price={result.price} />
                     )
                 ); // need to include array key here* //https://reactjs.org/docs/lists-and-keys.html
                 return products;
@@ -27,9 +27,9 @@ function Products(props){
                 const products =
                 (results.map(
                     (result) =>
-                    <Items name={result.name} category={result.category} price={result.price} />
+                    <Items key={result.name} addItemToCart={props.addItemToCart} name={result.name} category={result.category} price={result.price} />
                     )
-                ); // need to include array key here* //https://reactjs.org/docs/lists-and-keys.html
+                ); // need to include array key here* //https://reactjs.org/docs/lists-and-keys.html onClick={() => props.addItemToCart}
                 return products;
             }
         }

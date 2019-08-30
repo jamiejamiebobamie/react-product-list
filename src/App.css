@@ -8,25 +8,13 @@
 .display{
     height: 100px;
     margin-bottom: 0px;
-    margin-left: 30px;
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    font-size: 60px;
 }
 
-.categories{
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-left: -50px;
-    /* height: 300px; */
-    margin-bottom: auto;
-    align-content: flex-start;
-    /* flex-grow: 1; */
-
-    /* justify-content: space-around; */
-}
 
 h1{
     justify-content: center;
@@ -48,22 +36,11 @@ button:hover{
     color:white;
 }
 
-
-.selected-button{
-    /* padding: 5px;
-    margin: 5px; */
-    /* width: 100px; */
-    /* height: 30px; */
-    /* background-color: #F7882F; */
-    /* border-color: transparent; */
-    /* border-radius: 1.5px; */
-    /* opacity: .9; */
-    background-color: #F7C331;
-    /* color: #F7C331; */
-    /* margin: .1px;
-    padding: .1px;
-    margin-top: -.1px; */
+.toggleCart{
+    margin-left: 158px;
+    /* margin-right: 90px; */
 }
+
 
 /* .selected-button{
     opacity: .9;
@@ -73,6 +50,19 @@ button:hover{
 @media only screen and (min-width: 920px) {
     .categories{
         height: 250px;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .display{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .toggleCart{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

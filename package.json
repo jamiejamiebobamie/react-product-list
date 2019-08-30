@@ -21,5 +21,18 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "This is a starter project for a React challenge. The goal is to create a page that displays a list of **products** and a list of **categories** for those products. Clicking one of the category buttons should filter the list of products display to only display products in that category.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiejamiebobamie/react-product-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamiejamiebobamie/react-product-list/issues"
+  },
+  "homepage": "https://github.com/jamiejamiebobamie/react-product-list#readme"
 }

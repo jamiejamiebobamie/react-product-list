@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Shopping.css';
 import Products from './Products.js'
-import Pricebar from './Pricebar.js'
 import inventory, { categories } from './inventory'
 
 
@@ -56,7 +55,7 @@ class Shopping extends Component {
     render(){
         const listItems =
         (categories.map((category) =>
-            <li className={ this.CheckCategories({category}) ? "selected-button":""}>
+            <li key={category} className={ this.CheckCategories({category}) ? "selectedButton":"unselectedButton"}>
                 <button onClick={() => { this.ChangeCategory({category})}}>{category} ({inventory.filter(item => item.category === category).length})
                 </button>
             </li>
@@ -66,15 +65,14 @@ class Shopping extends Component {
         <div>
             <ul className="categories">
                 {listItems}
-                <li className={(this.CheckCategories({category: "All"}) ? "selected-button":"")}>
+                <li className={(this.CheckCategories({category: "All"}) ? "selectedButton":"unselectedButton")}>
                     <button onClick={() => this.ChangeCategory({category:"All"})}>All ({inventory.length})</button>
                 </li>
-                <li className={(false ? "selected-button":"")}>
+                <li className={(false ? "selected-button":"unselectedButton")}>
                     <button onClick={() => this.setState( {currentCategories: null} )}>None (0)</button>
                 </li>
             </ul>
-            {(this.state.currentCategories!=null ? <Pricebar currentCategories={this.state.currentCategories}/>:"")}
-            <Products currentCategories={this.state.currentCategories} />
+            <Products addItemToCart={this.props.addItemToCart} currentCategories={this.state.currentCategories} />
         </div>
     )
 }

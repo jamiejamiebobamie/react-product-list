@@ -1,16 +1,18 @@
+
 import React from 'react';
 import './Items.css'
 
 function Items(props){
     return(
-        <div className="Items">
+        <button className="Items" onClick={()=> props.addItemToCart(props)}>
+        <h1 className="buyItem">add to cart</h1>
         <li className="ItemsInfo">
-            <div className="item-text">Name: {props.name}</div>
-            <div className="item-text">Category: {props.category}</div>
-            <div className="item-text">Price: {props.price}</div>
+            <div className="item-text-name">{props.name}</div>
+            <div className="item-text-price">${props.price}</div>
+            <div className="item-text-category">{props.category}</div>
         </li>
-        <img src="/imgs/product.png" alt=""/>
-        </div>
+        <img className="itemImg" src="/imgs/product.png" alt=""/>
+        </button>
     )
 }
 
