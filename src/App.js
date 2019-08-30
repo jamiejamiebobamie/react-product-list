@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Shoppingcart from './Shoppingcart.js';
 import Shopping from './Shopping.js';
+import Cartpricebar from './Cartpricebar.js'
 
 class App extends Component {
     constructor(props) {
@@ -38,8 +39,14 @@ class App extends Component {
     }
         return (
           <div className="App">
-          <h1 className="display">EasyShop</h1>
-          <button className="toggleCart" onClick={ () => { this.setState( {ShoppingCartToggled: !this.state.ShoppingCartToggled} ) } }> { (this.state.ShoppingCartToggled ? 'Shop' :("My Cart ("+this.state.cartItems.length+")") )}</button>
+          <div className="fauxNavbar">
+              <div>
+                <h1 className="display">EasyShop</h1>
+                <button className="toggleCart" onClick={ () => { this.setState( {ShoppingCartToggled: !this.state.ShoppingCartToggled} ) } }> { (this.state.ShoppingCartToggled ? 'Shop' :("My Cart ("+this.state.cartItems.length+")") )}</button>
+              </div>
+              {(this.state.cartItems < 1 ? <Cartpricebar cartItems={[{price:0.00}]} /> : <Cartpricebar cartItems={this.state.cartItems} />)}
+              <img className="cashier" width="276" height="200" src="./imgs/checkout_iconSide.png" alt="" />
+          </div>
             <ol className="container">
                 {pageContent}
             </ol>

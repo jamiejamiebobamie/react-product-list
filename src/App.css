@@ -41,6 +41,16 @@ button:hover{
     /* margin-right: 90px; */
 }
 
+.fauxNavbar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cashier{
+    margin-top: 15px;
+    margin-left: auto;
+}
+
 
 /* .selected-button{
     opacity: .9;

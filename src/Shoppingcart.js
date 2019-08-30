@@ -14,14 +14,14 @@ function ShoppingCart(props){
 
     const noItems = (
         <div>
-        <img className="cartPicture" src="./imgs/cart_icon.png"alt=""/>
-        <h1 className="cartMessage">No items in cart</h1>
+            <img className="cartPicture" src="./imgs/cart_icon.png"alt=""/>
+            <h1 className="cartMessage">no items in cart</h1>
         </div>
     )
 
     return (
         <div className="ShoppingCart">
-        {(props.cartItems.length>0 ? items : noItems)}
+            {(props.cartItems.length>0 ? items : noItems)}
         </div>
     )
 }

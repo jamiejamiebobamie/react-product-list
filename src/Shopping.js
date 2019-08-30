@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './Shopping.css';
 import Products from './Products.js'
 import inventory, { categories } from './inventory'
-import Pricebar from './Pricebar.js'
-
 
 class Shopping extends Component {
 
