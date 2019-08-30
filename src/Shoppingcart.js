@@ -1,20 +1,27 @@
 import React from 'react';
 import './Shoppingcart.css';
-import Pricebar from './Pricebar.js'
 import Cartproducts from './Cartproducts.js'
 import './Shoppingcart.css'
-
+import Cartpricebar from './Cartpricebar.js'
 
 function ShoppingCart(props){
+    const items =  (
+        <div>
+            <Cartpricebar cartItems={props.cartItems} />
+            <Cartproducts removeItemFromCart={props.removeItemFromCart} cartItems={props.cartItems} />
+        </div>
+    )
+
     const noItems = (
         <div>
         <img className="cartPicture" src="./imgs/cart_icon.png"alt=""/>
         <h1 className="cartMessage">No items in cart</h1>
         </div>
     )
+
     return (
         <div className="ShoppingCart">
-        {(props.cartItems.length>0 ? <Cartproducts removeItemFromCart={props.removeItemFromCart} cartItems={props.cartItems} /> : noItems)}
+        {(props.cartItems.length>0 ? items : noItems)}
         </div>
     )
 }

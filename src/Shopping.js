@@ -73,11 +73,11 @@ class Shopping extends Component {
                     <button onClick={() => this.setState( {currentCategories: null} )}>None (0)</button>
                 </li>
             </ul>
-            {(this.state.currentCategories!=null ? <Pricebar currentCategories={this.state.currentCategories}/>:"")}
             <Products addItemToCart={this.props.addItemToCart} currentCategories={this.state.currentCategories} />
         </div>
     )
 }
 }
+// {(this.state.currentCategories!=null ? <Pricebar currentCategories={this.state.currentCategories}/>:"")}
 
 export default Shopping
