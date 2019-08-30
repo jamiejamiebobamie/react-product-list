@@ -61,7 +61,7 @@
     font-weight: bolder;
      font-family: "Comic Sans MS", cursive, sans-serif;
       margin-top: -7px;
-      margin-left: 10px;
+      margin-left: 11px;
     height: auto;
 }
 
@@ -69,11 +69,6 @@
     color: #F7C331;
 }
 
-/* .toggleCategories{
-    display: flex;
-    margin-left: 49%;
-    margin-right: 51%;
-} */
 
 .toggleCategoriesOff, .toggleCategoriesOn{
     display: flex;
