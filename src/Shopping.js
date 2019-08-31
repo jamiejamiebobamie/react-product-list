@@ -11,7 +11,7 @@ class Shopping extends Component {
 
         this.state = {
             currentCategories: props.currentCategories,
-            showCategories: false,
+            showCategories: true,
         };
     }
 

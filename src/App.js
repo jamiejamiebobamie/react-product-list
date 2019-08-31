@@ -11,7 +11,7 @@ class App extends Component {
         this.removeItemFromCart = this.removeItemFromCart.bind(this);
         this.state = {
             currentCategories: null,
-            ShoppingCartToggled: false,
+            ShoppingCartToggled: true,
             cartItems: [],
         };
     }
