@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-  "npm": "6.9.0",
-  "node": "12.5.0"
-},
+    "npm": "6.9.0",
+    "node": "12.5.0"
+  },
   "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "path": "^0.12.7",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.1"
