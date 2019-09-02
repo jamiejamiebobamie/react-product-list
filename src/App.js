@@ -10,7 +10,7 @@ class App extends Component {
         this.addItemToCart = this.addItemToCart.bind(this);
         this.removeItemFromCart = this.removeItemFromCart.bind(this);
         this.state = {
-            currentCategories: null,
+            currentCategories: ["All"],
             ShoppingCartToggled: true,
             cartItems: [],
         };

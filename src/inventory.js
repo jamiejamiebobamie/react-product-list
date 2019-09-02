@@ -82,7 +82,8 @@ var inventory = [
 {id: 21, name: "Kanlam", description: "Cloned encompassing time-frame", price: "9.52", category: "Toys"},
 {id: 28, name: "Prodder", description: "Ameliorated object-oriented hierarchy", price: "1.47", category: "Toys"},
 {id: 139, name: "Asoka", description: "Phased analyzing array", price: "3.72", category: "Toys"},
-{id: 172, name: "Alpha", description: "Up-sized full-range database", price: "8.64", category: "Toys"},]
+{id: 172, name: "Alpha", description: "Up-sized full-range database", price: "8.64", category: "Toys"},
+{id: 172, name: "Beta", description: "Down-sized full-range database", price: "1008.64", category: "Toys"},]
 
 // inventory = _.uniqBy(inventory, 'name')
 inventory = _.sortBy(inventory, 'category')
