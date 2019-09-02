@@ -81,7 +81,7 @@ class Shopping extends Component {
                     </ul>
             )
     return (
-        <div>
+        <div className="Shopping">
             <button className={(this.state.showCategories ? "toggleCategoriesOn" : "toggleCategoriesOff")} onClick={this.toggleCategories}>Categories</button>
             {this.state.showCategories ? categories_buttons : ""}
             <Products addItemToCart={this.props.addItemToCart} currentCategories={this.state.currentCategories} />

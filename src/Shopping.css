@@ -1,3 +1,6 @@
+.Shopping{
+    margin-top: -100px;
+}
 
 .categories{
     display: flex;
@@ -72,7 +75,7 @@
 
 .toggleCategoriesOff, .toggleCategoriesOn{
     display: flex;
-    margin-left: 100px;
+    margin-left: 110px;
     width:100px;
     height:40px;
     margin-bottom: 50px;
@@ -90,8 +93,10 @@
 @media only screen and (max-width:600px){
     .toggleCategoriesOff, .toggleCategoriesOn{
         display: flex;
-        margin-left: 34.9%;
-        margin-right: 65.1%;
+        margin-left: 56.5px;
+        margin-right: auto;
+        /* margin-left: 34.9%;
+        margin-right: 65.1%; */
     }
 
 }

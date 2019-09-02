@@ -2,7 +2,6 @@ import React from 'react';
 import './Shoppingcart.css';
 import Cartproducts from './Cartproducts.js'
 import './Shoppingcart.css'
-import Cartpricebar from './Cartpricebar.js'
 
 function ShoppingCart(props){
     const items =  (
@@ -20,6 +19,7 @@ function ShoppingCart(props){
 
     return (
         <div className="ShoppingCart">
+            <h1 className="cartHeader">my cart</h1>
             {(props.cartItems.length>0 ? items : noItems)}
         </div>
     )

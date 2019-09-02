@@ -2,9 +2,15 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    padding-right: 55px;
+    padding-right: 60px;
     margin-top: 110px;
     margin-bottom: auto;
+}
+
+.cartHeader{
+    margin-top: auto;
+    margin-left: 5vw;
+    font-size: 70px;
 }
 
 .cartMessage{
@@ -19,4 +25,14 @@
 .ShoppingCart{
     margin-top: auto;
     margin-bottom: auto;
+}
+
+@media screen only and (min-width:600px){
+
+    .cartHeader{
+        margin-top: auto;
+        margin-left: 5vw;
+        font-size: 70px;
+    }
+
 }
