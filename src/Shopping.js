@@ -16,6 +16,7 @@ class Shopping extends Component {
     }
 
     ChangeCategory(props) {
+        let index = -1
         if (props.category === "All"){
             this.setState( {currentCategories: [props.category]} );
         } else {
@@ -27,11 +28,17 @@ class Shopping extends Component {
                     for (let i = 0; i < this.state.currentCategories.length; i++){
                         if (this.state.currentCategories[i] === props.category){
                             notPresent = false;
+                            index = i
                         }
                     }
                     if (notPresent) {
                         this.setState( {currentCategories:
                             [...this.state.currentCategories, props.category]} );
+                    } else {
+                        let arr = [...this.state.currentCategories]
+                        if (index > -1) {arr.splice(index, 1);}
+                        this.setState( {currentCategories:
+                            [...arr]} );
                     }
                 }
             } else {

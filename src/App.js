@@ -16,8 +16,6 @@ class App extends Component {
         };
     }
 
-
-
     addItemToCart(props) {
         this.setState( { cartItems: [...this.state.cartItems, props] } );
     }
