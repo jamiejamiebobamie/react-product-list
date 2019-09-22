@@ -43,7 +43,7 @@ var inventory = [
 {id: 98, name: "Sub-Ex", description: "Progressive disintermediate database", price: "6.97", category: "Home"},
 {id: 197, name: "Domainer", description: "Decentralized needs-based architecture", price: "1.78", category: "Home"},
 {id: 7, name: "Zathin", description: "Ameliorated bi-directional strategy", price: "6.13", category: "Industrial"},
-{id: 22, name: "Mat Lam Tam", description: "Inverse motivating groupware", price: "6.92", category: "Industrial"},
+{id: 22, name: "Mat LamTam", description: "Inverse motivating groupware", price: "6.92", category: "Industrial"},
 {id: 68, name: "Zamit", description: "Organized empowering knowledge user", price: "5.78", category: "Industrial"},
 {id: 14, name: "Konklux", description: "Object-based even-keeled frame", price: "8.50", category: "Jewelery"},
 {id: 19, name: "Lotstring", description: "Upgradable human-resource conglomeration", price: "1.69", category: "Jewelery"},
