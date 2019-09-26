@@ -2,7 +2,7 @@
   "name": "react-product-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jamiejamiebobamie.github.io/react-product-list"
+  "homepage": "https://jamiejamiebobamie.github.io/react-product-list",
   "engines": {
     "npm": "6.9.0",
     "node": "12.5.0"
