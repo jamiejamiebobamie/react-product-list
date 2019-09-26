@@ -2,6 +2,7 @@
   "name": "react-product-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jamiejamiebobamie.github.io/react-product-list"
   "engines": {
     "npm": "6.9.0",
     "node": "12.5.0"
@@ -16,13 +17,15 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,7 +38,9 @@
   ],
   "description": "This is a starter project for a React challenge. The goal is to create a page that displays a list of **products** and a list of **categories** for those products. Clicking one of the category buttons should filter the list of products display to only display products in that category.",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamiejamiebobamie/react-product-list.git"
